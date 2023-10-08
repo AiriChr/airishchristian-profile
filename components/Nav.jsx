@@ -23,21 +23,22 @@ const Nav = () => {
         setShadow(false);
       }
     };
-    window.addEventListener('scrollY', handleShadow)
+    window.addEventListener('scroll', handleShadow)
   },[])
 
   return (
 
-    <div className={shadow ? 'fixed w-full h-15 shadow-md shadow-gray-400 z-[100]' : 'fixed w-full h-15 z-[100]'} >
-      <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16 bg-slate-900'>
+    <nav className={shadow ? 'fixed w-full h-15 shadow-md shadow-gray-400 z-[100]' : 'fixed w-full h-15 z-[100]'} >
+      <div className='flex justify-between items-center w-full h-full px-2 md:px-16 bg-slate-900'>
 
           <Image width='160' height='100' src='/assets/navLogo.png'/>
 
 
         <div>
 
+
           <ul className='hidden md:flex'>
-            <Link href='/#home'>
+            <Link href='/#home' >
               <li className='ml-10 text-sm uppercase hover:border-b'>Home</li>
             </Link>
             <Link href='/#about'>
@@ -114,7 +115,7 @@ const Nav = () => {
         </div>
       </div>
     </div>
-    </div>
+    </nav>
   );
 };
 

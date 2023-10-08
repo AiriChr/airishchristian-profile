@@ -10,6 +10,8 @@ html {
   font-family: 'Raleway', sans-serif;
 }
 
+
+
 @layer base {
   body {
     @apply bg-blue-900 text-gray-400 tracking-wide

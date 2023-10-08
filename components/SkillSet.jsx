@@ -7,9 +7,9 @@ const SkillData = [
     {id: 3, name: 'JavaScript', imageLocation: '/assets/skills/javascript.png'},
     {id: 4, name: 'React', imageLocation: '/assets/skills/react.png'},
     {id: 5, name: 'Tailwind', imageLocation: '/assets/skills/tailwind.png'},
-    {id: 6, name: 'Firebase', imageLocation: '/assets/skills/firebase.png'},
+    {id: 6, name: 'Java', imageLocation: '/assets/skills/java.svg'},
     {id: 7, name: 'Github', imageLocation: '/assets/skills/github1.png'},
-    {id: 8, name: 'Shopify', imageLocation: '/assets/skills/shopify.png'},
+    {id: 8, name: 'MySQL', imageLocation: '/assets/skills/mysql.svg'},
 
  ]
 
