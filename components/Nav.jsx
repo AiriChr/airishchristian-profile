@@ -23,35 +23,36 @@ const Nav = () => {
         setShadow(false);
       }
     };
-    window.addEventListener('scrollY', handleShadow)
+    window.addEventListener('scroll', handleShadow)
   },[])
 
   return (
 
-    <div className={shadow ? 'fixed w-full h-15 shadow-md shadow-gray-400 z-[100]' : 'fixed w-full h-15 z-[100]'} >
-      <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16 bg-slate-900'>
+    <nav className={shadow ? 'fixed w-full h-15 shadow-md shadow-gray-400 z-[100]' : 'fixed w-full h-15 z-[100]'} >
+      <div className='flex justify-between items-center w-full h-full px-2 md:px-16 bg-slate-900'>
 
           <Image width='160' height='100' src='/assets/navLogo.png'/>
 
 
         <div>
 
+
           <ul className='hidden md:flex'>
-            <Link href='/#home'>
-              <li className='ml-10 text-sm uppercase hover:border-b'>Home</li>
-            </Link>
-            <Link href='/#about'>
-              <li className='ml-10 text-sm uppercase hover:border-b'>About</li>
-            </Link>
-            <Link href='/#skills'>
-              <li className='ml-10 text-sm uppercase hover:border-b'>Skills</li>
-            </Link>
-            <Link href='/#projects'>
-              <li className='ml-10 text-sm uppercase hover:border-b'>Projects</li>
-            </Link>
-            <Link href='/#contact'>
-              <li className='ml-10 text-sm uppercase hover:border-b'>Contact</li>
-            </Link>
+            <li className='ml-10 text-sm uppercase hover:border-b'>
+              <Link href='/#home'>Home</Link>
+            </li>
+            <li className='ml-10 text-sm uppercase hover:border-b'>
+              <Link href='/#about'>About</Link>
+            </li>
+            <li className='ml-10 text-sm uppercase hover:border-b'>
+              <Link href='/#about'>Skills</Link>
+            </li>
+            <li className='ml-10 text-sm uppercase hover:border-b'>
+              <Link href='/#about' >Projects</Link>
+            </li>
+            <li className='ml-10 text-sm uppercase hover:border-b'>
+              <Link href='/#about'>Contact</Link>
+            </li>
           </ul>
         </div>
         
@@ -78,21 +79,21 @@ const Nav = () => {
         </div>
         <div className='py-4 flex flex-col'>
           <ul className='uppercase'>
-            <Link href='/#home'>
-              <li className='py-4 text-sm'>Home</li>
-            </Link>
-            <Link href='/#about'>
-              <li className='py-4 text-sm'>About</li>
-            </Link>
-            <Link href='/#skills'>
-              <li className='py-4 text-sm'>Skills</li>
-            </Link>
-            <Link href='/#projects'>
-              <li className='py-4 text-sm'>Projects</li>
-            </Link>
-            <Link href='/#contact'>
-              <li className='py-4 text-sm'>Contact</li>
-            </Link>
+            <li className='text-sm py-4' onClick={handleNav}>
+              <Link href='/#home'>Home</Link>
+            </li>
+            <li className='text-sm py-4' onClick={handleNav}>
+              <Link href='/#about'>About</Link>
+            </li>
+            <li className='text-sm py-4' onClick={handleNav}>
+              <Link href='/#skills'>Skills</Link>
+            </li>
+            <li className='text-sm py-4' onClick={handleNav}>
+              <Link href='/#projects' >Projects</Link>
+            </li>
+            <li className='text-sm py-4' onClick={handleNav}>
+              <Link href='/#contact'>Contact</Link>
+            </li>
           </ul>
           <div className='pt-20'>
             <p className='uppercase tracking-widest text-cyan-200'>Let's Connect</p>
@@ -114,7 +115,7 @@ const Nav = () => {
         </div>
       </div>
     </div>
-    </div>
+    </nav>
   );
 };
 

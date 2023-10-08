@@ -7,7 +7,7 @@ import { HiOutlineChevronDoubleUp } from 'react-icons/hi'
 
 const Contact = () => {
   return (
-    <div id='contact' className='w-full lg:h-screen'>
+    <section id='contact' className='w-full lg:h-screen border-t-2'>
         <div className='max-w-[1240px] m-auto px-2 py-16 w-full'>
             <p className='text-xl tracking-widest uppercase text-cyan-200'>Contact</p>
             <h2 className='py-4'>Get In Touch</h2>
@@ -27,10 +27,10 @@ const Contact = () => {
                             <p className='uppercase pt-8'>Connect With Me</p>
                             <div className='flex items-center justify-between py-4'>
                                 <div className='rounded-full shadow-md shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-10'>
-                                    <FaLinkedinIn />
+                                    <a href="" target='_blank' rel="noreferrer noopener"><FaLinkedinIn /></a>
                                 </div>
                                 <div className='rounded-full shadow-md shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-10'>
-                                    <FaGithub />
+                                    <a href="https://www.linkedin.com/in/airishchristian"><FaGithub /></a>
                                 </div>
                                 <div className='rounded-full shadow-md shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-10'>
                                     <AiOutlineMail />
@@ -86,7 +86,7 @@ const Contact = () => {
                 </Link>
             </div>
         </div>
-    </div>
+    </section>
   )
 }
 
