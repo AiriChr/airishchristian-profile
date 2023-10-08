@@ -16,14 +16,14 @@ const SkillData = [
 const SkillSet = () => {
     const listSkills = SkillData.map(skill => 
             <li key={skill.id}>
-                    <div className='flex flex-col-2 items-center justify-center shadow-md shadow-gray-400 p-4 hover:scale-105 cursor-pointer duration-300'>
+                    <div className='flex flex-col-2 items-center md:justify-center shadow-md shadow-gray-400 p-4 hover:scale-105 cursor-pointer duration-300'>
                         <Image
                             src={skill.imageLocation}
                             width='64' 
                             height='64'
                             alt='/'
                         />
-                        <div className="p-2 items-center">
+                        <div className="mx-4 p-2 items-center border-l-2 border-gray-400">
                             <h3>{skill.name}</h3>
                         </div>
                     </div>
