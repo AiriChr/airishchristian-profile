@@ -5,7 +5,9 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
+    logo: "/assets/navLogo.png",
     extend: {},
+
   },
   plugins: [],
 };
