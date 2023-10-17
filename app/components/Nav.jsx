@@ -6,6 +6,8 @@ import React, { useState, useEffect } from 'react';
 import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from 'react-icons/ai';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
+import { useSession } from "next-auth/react"
+import {SignOut, SignIn} from './LogButtons'
 
 
 const Nav = () => {
@@ -14,6 +16,8 @@ const Nav = () => {
   const handleNav = () => {
     setNav(!nav)
   }
+
+ const {data: session, status} = useSession();
 
   useEffect(()=> {
     const handleShadow = () => {
@@ -31,12 +35,10 @@ const Nav = () => {
     <nav className={shadow ? 'fixed w-full h-15 shadow-md shadow-gray-400 z-[100]' : 'fixed w-full h-15 z-[100]'} >
       <div className='flex justify-between items-center w-full h-full px-2 md:px-16 bg-slate-900'>
 
-          <Image width='160' height='100' src='/assets/navLogo.png'/>
-
-
+        <Image width='160' height='100' src='/assets/navLogo.png'/>
+        
+        
         <div>
-
-
           <ul className='hidden md:flex'>
             <li className='ml-10 text-sm uppercase hover:border-b'>
               <Link href='/#home'>Home</Link>
@@ -45,14 +47,18 @@ const Nav = () => {
               <Link href='/#about'>About</Link>
             </li>
             <li className='ml-10 text-sm uppercase hover:border-b'>
-              <Link href='/#about'>Skills</Link>
+              <Link href='/#skills'>Skills</Link>
             </li>
             <li className='ml-10 text-sm uppercase hover:border-b'>
-              <Link href='/#about' >Projects</Link>
+              <Link href='/#projects' >Projects</Link>
             </li>
             <li className='ml-10 text-sm uppercase hover:border-b'>
-              <Link href='/#about'>Contact</Link>
+              <Link href='/#contact'>Contact</Link>
             </li>
+            <li className='ml-10 text-sm uppercase hover:border-b'>
+              <Link href='/project-list'>CRUD</Link>
+            </li>
+            <li className='ml-10 text-sm uppercase hover:border-b'>{(session) ? <SignOut/> : <SignIn/>}</li>
           </ul>
         </div>
         
@@ -94,6 +100,7 @@ const Nav = () => {
             <li className='text-sm py-4' onClick={handleNav}>
               <Link href='/#contact'>Contact</Link>
             </li>
+            <li className='ml-10 text-sm uppercase hover:border-b'>{session ? <SignOut/> : <SignIn/>}</li>
           </ul>
           <div className='pt-20'>
             <p className='uppercase tracking-widest text-cyan-200'>Let's Connect</p>
