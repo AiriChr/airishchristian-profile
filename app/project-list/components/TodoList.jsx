@@ -9,7 +9,7 @@ const TodoList = () => {
         <div className='max-w-[1240px] mx-auto flex flex-col h-full'>
             <p className='text-xl tracking-widest uppercase text-cyan-200'>Database</p>
             <h2 className='py-4'>My TODO List</h2>
-        
+  
             <TodoListInput/>
             <ToDoListItems/>
         </div>

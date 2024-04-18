@@ -22,7 +22,8 @@ const TodoListInput = () => {
           }  
           catch (error) {
             console.error(error)
-          }router.refresh()
+          }
+          router.refresh()
 
           setInputTitle('')
           setInputDescription('')
